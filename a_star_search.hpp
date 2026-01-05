@@ -17,6 +17,9 @@ struct Cell {
     double h = 0.0;
 };
 
+// returns in [col, row] tuples that map into the grid
+// in the grid 0 means blocked (wall) and 1 means unblocked.
+// we are returning a path of points whih is the path from the src to dest if it exists.
 std::optional<std::vector<std::pair<int, int>>> a_star_search(const std::vector<std::vector<int>> &grid,
                                                               std::pair<int, int> src, std::pair<int, int> dest);
 
